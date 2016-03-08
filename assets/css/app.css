@@ -8,6 +8,10 @@
 * http://trentrichardson.com/examples/timepicker
 * Copyright (c) 2015 Trent Richardson; Licensed MIT */
 
+
+@import url(https://fonts.googleapis.com/css?family=ABeeZee);
+
+
 .ui-timepicker-div .ui-widget-header{
 	margin-bottom:8px
 	}
@@ -1241,7 +1245,8 @@ a.fc-more:hover{
  	}
  .fa-fw{
  	width:1.28571429em;
- 	text-align:center
+ 	text-align:center;
+ 	color: #fff;
  	}
  .fa-ul{
  	padding-left:0;
@@ -1822,8 +1827,6 @@ li,ul,ol,table,tr,td,th,p,blockquote,body{
 	font-size:100%
 	}
 body{
-	margin-left:10px;
-	margin-right:10px;
 	padding-bottom:10px;
 	color:#333;
 	font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -1866,9 +1869,16 @@ hr{
 .web-notification-icon:focus,.web-notification-icon:hover{
 	color:#000
 	}
+
+.sidebar a {
+    text-decoration: none;
+}
+
 a{
-	color:#36c;
-	border:0
+	color: lavender;
+	border:0;
+    text-decoration: none;
+    text-transform: none;
 	}
 a:focus{
 	outline:0;
@@ -1877,7 +1887,7 @@ a:focus{
 	border:1px dotted #aaa
 	}
 a:hover{
-	color:#333;
+	color:#fff200;
 	text-decoration:none
 	}
 h1,h2,h3{
@@ -1903,18 +1913,20 @@ table{
 	margin-bottom:0
 	}
 th,td{
-	border:1px solid #eee;
+	border:1px solid #cfcfd0;
 	padding-top:.5em;
 	padding-bottom:.5em;
 	padding-left:3px;
-	padding-right:3px
+	padding-right:3px;
+	background:#ececec;
 	}
 td{
 	vertical-align:top
 	}
 th{
 	background:#fbfbfb;
-	text-align:left
+	text-align:left;
+	background:#417ba9;
 	}
 td li{
 	margin-left:20px
@@ -2305,8 +2317,6 @@ div.ui-tooltip{
 	margin-left:20px
 	}
 header{
-	margin-top:10px;
-	padding-bottom:10px;
 	border-bottom:1px solid #dedede
 	}
 header h1{
@@ -2320,11 +2330,13 @@ header h1{
 	}
 header ul{
 	text-align:right;
-	font-size:.9em
+	font-size:.9em;
+	background:#fff200;
+
 	}
 header li{
 	display:inline;
-	padding-left:30px
+	padding-left:0px
 	}
 header a{
 	color:#777;
@@ -2349,14 +2361,14 @@ nav .active a{
 	color:#d40000
 	}
 .page-header{
-	margin-bottom:20px
+	margin-bottom:20px;
 	}
 .page-header h2{
 	margin:0;
 	padding:0;
 	font-size:1.4em;
 	font-weight:bold;
-	border-bottom:1px dotted #ccc
+	border-bottom:1px dotted #ccc;
 	}
 .page-header h2 a{
 	color:#333;
@@ -2366,14 +2378,26 @@ nav .active a{
 	color:#aaa
 	}
 .page-header ul{
-	text-align:left;
-	margin-top:5px;
-	display:inline-block
+	text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    z-index: 99;
+    background:#ececec;;
+    right: 0;
 	}
+
+
 .menu-inline li,.page-header li{
 	display:inline;
-	padding-right:10px;
-	font-size:.95em
+	padding-right:3px;
+	font-size:.80em;
+	font-family: 'ABeeZee', sans-serif;
+	padding-left: 2px;
+	border-radius: 10px;
+	background: #417ba9;
+	padding: 5px;
+	margin: 5px;
 	}
 .menu-inline{
 	margin-bottom:5px
@@ -2384,6 +2408,11 @@ nav .active a{
 	.page-header-mobile li{
 		display:block;
 		margin-bottom:5px
+		}
+		.page-header ul{
+			position: relative;
+			width: 100%
+
 		}
 }
 	.public-board{
@@ -3051,7 +3080,6 @@ span.comment-sorting a:hover{
 	font-size:1.1em
 	}
 .sidebar-container{
-	margin-top:10px;
 	position:relative;
 	clear:both
 	}
@@ -3060,20 +3088,36 @@ span.comment-sorting a:hover{
 	width:76%;
 	position:absolute
 	}
+
+/*#2F9496;*/
 .sidebar{
-	width:20%;
+	width:15%;
 	float:left;
 	padding:10px;
-	padding-top:0;
 	border:1px solid #ddd;
-	background:#fdfdfd;
-	border-radius:5px
+	background:#417ba9;
+	border-radius:7px;
+	padding-top:8%;
+	margin-top: -60px;
+	padding-bottom: 15%;
 	}
+
+.sidebar li.active {
+    border-left: 5px solid #462626;;
+    padding-left: 8px;
+
+}
+
 .sidebar li{
-	list-style-type:square;
-	margin-left:30px;
-	line-height:1.8em
+	margin-left:15px;
+	line-height:35px;
+	list-style-type: none;
+	border-bottom: 1px dotted #BED2D8;
 	}
+li.active a:hover {
+    color: #555;
+}
+
 .sidebar li.active a{
 	color:#000;
 	font-weight:bold;
@@ -3429,4 +3473,3 @@ span.comment-sorting a:hover{
 	div.ganttview-block div.ui-resizable-handle.ui-resizable-s{
 		bottom:-0
 	}
-	
