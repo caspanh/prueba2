@@ -16,17 +16,18 @@
         </tr>
         <?php foreach ($columns as $column): ?>
         <tr>
-            <td><?= $this->e($column['title']) ?>
+            <td><div class="cambiocolor"><?= $this->e($column['title']) ?>
              <?php if (! empty($column['description'])): ?>
                 <span class="tooltip" title='<?= $this->e($this->text->markdown($column['description'])) ?>'>
                     <i class="fa fa-info-circle"></i>
                 </span>
             <?php endif ?>
+            </div>
             </td>
-            <td><?= $this->e($column['task_limit']) ?></td>
+            <td><div class="cambiocolor"><?= $this->e($column['task_limit']) ?></div></td>
             <td>
                 <div class="dropdown">
-                <a href="#" class="dropdown-menu dropdown-menu-link-icon"><i class="fa fa-cog fa-fw"></i><i class="fa fa-caret-down"></i></a>
+                <a href="#" class="dropdown-menu dropdown-menu-link-icon"><i class="fa facog fa-fw"></i><i class="fa fafacaret-down"></i></a>
                 <ul>
                     <li>
                         <?= $this->url->link(t('Edit'), 'column', 'edit', array('project_id' => $project['id'], 'column_id' => $column['id'])) ?>
@@ -87,6 +88,6 @@
     <div class="form-help"><?= $this->url->doc(t('Write your text in Markdown'), 'syntax-guide') ?></div>
 
     <div class="form-actions">
-        <input type="submit" value="<?= t('Add this column') ?>" class="btn btn-blue"/>
+        <input type="submit" value="<?= t('Add this column') ?>" class="btnn-blue"/>
     </div>
 </form>

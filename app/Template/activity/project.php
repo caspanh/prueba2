@@ -1,10 +1,10 @@
 <section id="main">
     <div class="page-header">
         <ul>
-            <li>
+         <li>
             <span class="dropdown">
                 <span>
-                    <i class="fa fa-caret-down"></i> <a href="#" class="dropdown-menu"><?= t('Actions') ?></a>
+                    <i class="fa facaret-down"></i> <a href="#" class="dropdown-menu"><?= t('Actions') ?></a>
                     <ul>
                         <?= $this->render('project/dropdown', array('project' => $project)) ?>
                     </ul>
@@ -33,8 +33,8 @@
                 <li><i class="fa fa-rss-square fa-fw"></i><?= $this->url->link(t('RSS feed'), 'feed', 'project', array('token' => $project['token']), false, '', '', true) ?></li>
                 <li><i class="fa fa-calendar fa-fw"></i><?= $this->url->link(t('iCal feed'), 'ical', 'project', array('token' => $project['token'])) ?></li>
             <?php endif ?>
+            </div>
         </ul>
-    </div>
-
+    
     <?= $this->render('event/events', array('events' => $events)) ?>
 </section>

@@ -9,7 +9,8 @@
 
     <div class="form-actions">
         <?= $this->url->link(t('Yes'), 'link', 'remove', array('link_id' => $link['id']), true, 'btn btn-red') ?>
-        <?= t('or') ?>
+    <div class="botoncancel">
         <?= $this->url->link(t('cancel'), 'link', 'index') ?>
+    </div>
     </div>
 </div>

@@ -11,7 +11,8 @@
         <?php if (! isset($hide_position)): ?>
             <td>#<?= $swimlane['position'] ?></td>
         <?php endif ?>
-        <td><?= $this->e($swimlane['name']) ?></td>
+        <td> <div class="cambiocolor"><?= $this->e($swimlane['name']) ?></div></td>
+        
         <td>
             <div class="dropdown">
             <a href="#" class="dropdown-menu dropdown-menu-link-icon"><i class="fa fa-cog fa-fw"></i><i class="fa fa-caret-down"></i></a>

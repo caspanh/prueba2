@@ -18,9 +18,12 @@
         </td>
         <td>
             <ul>
-                <?= $this->url->link(t('Edit'), 'link', 'edit', array('link_id' => $link['id'])) ?>
-                <?= t('or') ?>
+            <span class="cambiocolor">
+                <?= $this->url->link(t('Edit'), 'link', 'edit', array('link_id' => $link['id'])) ?></span>
+
+            <span class="cambiocolor">
                 <?= $this->url->link(t('Remove'), 'link', 'confirm', array('link_id' => $link['id'])) ?>
+            </span>
             </ul>
         </td>
     </tr>

@@ -1,6 +1,7 @@
 <div class="sidebar">
     <h2><?= t('Information') ?></h2>
     <ul>
+       
         <li <?= $this->app->checkMenuSelection('task', 'show') ?>>
             <?= $this->url->link(t('Summary'), 'task', 'show', array('task_id' => $task['id'], 'project_id' => $task['project_id'])) ?>
         </li>
@@ -71,6 +72,7 @@
         <?php endif ?>
 
         <?= $this->hook->render('template:task:sidebar:actions') ?>
+        
     </ul>
     <?php endif ?>
     <div class="sidebar-collapse"><a href="#" title="<?= t('Hide sidebar') ?>"><i class="fa fa-chevron-left"></i></a></div>

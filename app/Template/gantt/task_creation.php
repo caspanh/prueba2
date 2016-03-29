@@ -1,5 +1,6 @@
 <div class="page-header">
-    <h2><?= t('New task') ?></h2>
+    <h2 class="modificar"><?= t('New task') ?></h2>
+<hr/>
 </div>
 <form method="post" action="<?= $this->url->href('gantt', 'saveTask', array('project_id' => $values['project_id'])) ?>" autocomplete="off">
     <?= $this->form->csrf() ?>
@@ -57,7 +58,8 @@
 
     <div class="form-actions">
         <input type="submit" value="<?= t('Save') ?>" class="btn btn-blue" tabindex="11"/>
-        <?= t('or') ?>
+    <div class="botoncancel">    
         <?= $this->url->link(t('cancel'), 'board', 'show', array('project_id' => $values['project_id']), false, 'close-popover') ?>
+    </div>
     </div>
 </form>

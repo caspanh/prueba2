@@ -17,7 +17,9 @@
 
         <div class="form-actions">
             <input type="submit" value="<?= t('Duplicate') ?>" class="btn btn-red"/>
-            <?= t('or') ?> <?= $this->url->link(t('cancel'), 'project', 'show', array('project_id' => $project['id'])) ?>
+        <div class="botoncancel">
+        <?= $this->url->link(t('cancel'), 'project', 'show', array('project_id' => $project['id'])) ?>
+        </div>
         </div>
     </form>
 </div>

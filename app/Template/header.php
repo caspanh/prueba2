@@ -1,12 +1,13 @@
 <header>
     <nav>
         <h1>
-            <span class="logo">
-                <?= $this->url->link('K<span>B</span>', 'app', 'index', array(), false, '', t('Dashboard')) ?>
+              <span class="logo">
+                <?= $this->url->link('<img src="assets/img/logo11.png"/>', 'app', 'index', array(), false, '', t('Dashboard')) ?>
             </span>
             <span class="title">
                 <?= $this->e($title) ?>
             </span>
+
             <?php if (! empty($description)): ?>
                 <span class="tooltip" title='<?= $this->e($this->text->markdown($description)) ?>'>
                     <i class="fa fa-info-circle"></i>
@@ -39,7 +40,9 @@
                 <?php endif ?>
 
                 <span class="dropdown">
-                    <a href="#" class="dropdown-menu dropdown-menu-link-icon"><i class="fa fa-user fa-fw"></i><i class="fa fa-caret-down"></i></a>
+                    
+                    <a href="#" class="dropdown-menu dropdown-menu-link-icon"><i class="fa fauser fa-fw"></i><i class="fa fafacaret-down"></i></a>
+
                     <ul>
                         <li class="no-hover"><strong><?= $this->e($this->user->getFullname()) ?></strong></li>
                         <li><?= $this->url->link(t('My dashboard'), 'app', 'index', array('user_id' => $this->user->getId())) ?></li>

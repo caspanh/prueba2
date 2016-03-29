@@ -16,11 +16,11 @@
         </tr>
         <?php foreach ($subtask_paginator->getCollection() as $record): ?>
         <tr>
-            <td><?= $this->url->link($this->e($record['task_title']), 'task', 'show', array('project_id' => $record['project_id'], 'task_id' => $record['task_id'])) ?></td>
-            <td><?= $this->url->link($this->e($record['subtask_title']), 'task', 'show', array('project_id' => $record['project_id'], 'task_id' => $record['task_id'])) ?></td>
-            <td><?= dt('%B %e, %Y at %k:%M %p', $record['start']) ?></td>
-            <td><?= dt('%B %e, %Y at %k:%M %p', $record['end']) ?></td>
-            <td><?= n($record['time_spent']).' '.t('hours') ?></td>
+            <td><div class="cambiocolor"><?= $this->url->link($this->e($record['task_title']), 'task', 'show', array('project_id' => $record['project_id'], 'task_id' => $record['task_id'])) ?></div></td>
+            <td><div class="cambiocolor"><?= $this->url->link($this->e($record['subtask_title']), 'task', 'show', array('project_id' => $record['project_id'], 'task_id' => $record['task_id'])) ?></div></td>
+            <td><div class="cambiocolor"><?= dt('%B %e, %Y at %k:%M %p', $record['start']) ?></div></td>
+            <td><div class="cambiocolor"><?= dt('%B %e, %Y at %k:%M %p', $record['end']) ?></div></td>
+            <td><div class="cambiocolor"><?= n($record['time_spent']).' '.t('hours') ?></div></td>
         </tr>
         <?php endforeach ?>
     </table>

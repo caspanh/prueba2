@@ -11,8 +11,9 @@
 
         <div class="form-actions">
             <input type="submit" value="<?= t('Save') ?>" class="btn btn-red">
-            <?= t('or') ?>
+        <div class="botoncancel">
             <?= $this->url->link(t('cancel'), 'board', 'show', array('project_id' => $project['id']), false, 'close-popover') ?>
+        </div>
         </div>
     </form>
 </section>

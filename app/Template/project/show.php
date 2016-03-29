@@ -4,8 +4,8 @@
 <ul class="listing">
     <li><strong><?= $project['is_active'] ? t('Active') : t('Inactive') ?></strong></li>
 
-    <?php if ($project['is_private']): ?>
-        <li><i class="fa fa-lock"></i> <?= t('This project is private') ?></li>
+<div class="cambiocolor"> <?php if ($project['is_private']): ?>
+        <li><i class="fa fa-lock"></i> <?= t('This project is private') ?></li></div>
     <?php endif ?>
 
     <?php if ($project['is_public']): ?>
@@ -48,6 +48,7 @@
 <div class="page-header">
     <h2><?= t('Board') ?></h2>
 </div>
+
 <table class="table-stripped">
     <tr>
         <th class="column-60"><?= t('Column') ?></th>

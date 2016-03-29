@@ -40,8 +40,9 @@
 
         <div class="form-actions">
             <input type="submit" value="<?= t('Save') ?>" class="btn btn-blue"/>
-            <?= t('or') ?>
+        <div class="botoncancel">
             <?= $this->url->link(t('cancel'), 'task', 'show', array('task_id' => $task['id'], 'project_id' => $task['project_id'])) ?>
+        </div>
         </div>
     </form>
 

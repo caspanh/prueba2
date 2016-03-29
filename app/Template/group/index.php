@@ -18,22 +18,30 @@
             <?php foreach ($paginator->getCollection() as $group): ?>
             <tr>
                 <td>
+                <div class="cambiocolor">
                     #<?= $group['id'] ?>
+                </div>
                 </td>
                 <td>
+                <div class="cambiocolor">
                     <?= $this->e($group['external_id']) ?>
+                </div>
                 </td>
                 <td>
+                <div class="cambiocolor">
                     <?= $this->e($group['name']) ?>
+                </div>
                 </td>
                 <td>
                     <div class="dropdown">
-                    <a href="#" class="dropdown-menu dropdown-menu-link-icon"><i class="fa fa-cog fa-fw"></i><i class="fa fa-caret-down"></i></a>
+                    <a href="#" class="dropdown-menu dropdown-menu-link-icon"><i class="fa fa-cog fa-fw"></i><i class="fa facaret-down"></i></a>
                     <ul>
+                    <div class="cambiocolor">
                         <li><?= $this->url->link(t('Add group member'), 'group', 'associate', array('group_id' => $group['id'])) ?></li>
                         <li><?= $this->url->link(t('Members'), 'group', 'users', array('group_id' => $group['id'])) ?></li>
                         <li><?= $this->url->link(t('Edit'), 'group', 'edit', array('group_id' => $group['id'])) ?></li>
                         <li><?= $this->url->link(t('Remove'), 'group', 'confirm', array('group_id' => $group['id'])) ?></li>
+                    </div>
                     </ul>
                     </div>
                 </td>

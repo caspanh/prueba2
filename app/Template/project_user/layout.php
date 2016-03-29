@@ -17,6 +17,11 @@
                     <i class="fa fa-sliders fa-fw"></i>
                     <?= $this->url->link(t('Projects Gantt chart'), 'gantt', 'projects') ?>
                 </li>
+                <li>
+                <i class="fa fa-life-ring fa-fw"></i>
+                <a href="/kanboard.2/?controller=app&amp;action=index" class="" title="Tablero"> Resumen </a>
+
+            </li>
             <?php endif ?>
         </ul>
     </div>

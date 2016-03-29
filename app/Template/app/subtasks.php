@@ -12,21 +12,30 @@
             <th><?= $paginator->order(t('Subtask'), 'title') ?></th>
             <th class="column-20"><?= t('Time tracking') ?></th>
         </tr>
+         
         <?php foreach ($paginator->getCollection() as $subtask): ?>
         <tr>
-            <td class="task-table color-<?= $subtask['color_id'] ?>">
-                <?= $this->url->link('#'.$subtask['task_id'], 'task', 'show', array('task_id' => $subtask['task_id'], 'project_id' => $subtask['project_id'])) ?>
+          <td class="task-table color-<?= $subtask['color_id'] ?>">
+            <?= $this->url->link('#'.$subtask['task_id'], 'task', 'show', array('task_id' => $subtask['task_id'], 'project_id' => $subtask['project_id'])) ?>
             </td>
+
             <td>
+            <div class="cambiocolor">
                 <?= $this->url->link($this->e($subtask['project_name']), 'board', 'show', array('project_id' => $subtask['project_id'])) ?>
+                </div>
             </td>
             <td>
+            <div class="cambiocolor">
                 <?= $this->url->link($this->e($subtask['task_name']), 'task', 'show', array('task_id' => $subtask['task_id'], 'project_id' => $subtask['project_id'])) ?>
+                </div>
             </td>
             <td>
+            <div class="cambiocolor">
                 <?= $this->subtask->toggleStatus($subtask, 'dashboard') ?>
+            </div>
             </td>
             <td>
+            <div class="cambiocolor">
                 <?php if (! empty($subtask['time_spent'])): ?>
                     <strong><?= $this->e($subtask['time_spent']).'h' ?></strong> <?= t('spent') ?>
                 <?php endif ?>
@@ -34,9 +43,12 @@
                 <?php if (! empty($subtask['time_estimated'])): ?>
                     <strong><?= $this->e($subtask['time_estimated']).'h' ?></strong> <?= t('estimated') ?>
                 <?php endif ?>
+            </div>
             </td>
         </tr>
+        
         <?php endforeach ?>
+
     </table>
 
     <?= $paginator ?>

@@ -13,7 +13,7 @@
 
         <div class="form-actions">
             <input type="submit" value="<?= t('Save') ?>" class="btn btn-blue"/>
-            <?= t('or') ?> <?= $this->url->link(t('cancel'), 'project', 'index') ?>
+           <div class="botoncancel"> <?= $this->url->link(t('cancel'), 'project', 'index') ?></div>
         </div>
     </form>
     <?php if (isset($is_private) && $is_private): ?>

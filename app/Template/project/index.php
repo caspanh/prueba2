@@ -42,14 +42,15 @@
                     <?php endif ?>
                 </td>
                 <td>
+                 <span class="cambiocolor">
                     <?= $this->url->link('<i class="fa fa-th"></i>', 'board', 'show', array('project_id' => $project['id']), false, 'dashboard-table-link', t('Board')) ?>
-                    <?= $this->url->link('<i class="fa fa-sliders fa-fw"></i>', 'gantt', 'project', array('project_id' => $project['id']), false, 'dashboard-table-link', t('Gantt chart')) ?>
+                    <?= $this->url->link('<i class="fa fasliders fa-fw"></i>', 'gantt', 'project', array('project_id' => $project['id']), false, 'dashboard-table-link', t('Gantt chart')) ?>
 
                     <?php if ($project['is_public']): ?>
                         <i class="fa fa-share-alt fa-fw" title="<?= t('Shared project') ?>"></i>
                     <?php endif ?>
                     <?php if ($project['is_private']): ?>
-                        <i class="fa fa-lock fa-fw" title="<?= t('Private project') ?>"></i>
+                        <i class="fa falock fa-fw" title="<?= t('Private project') ?>"></i>
                     <?php endif ?>
 
                     <?php if (! empty($project['description'])): ?>
@@ -59,23 +60,32 @@
                     <?php endif ?>
 
                     <?= $this->url->link($this->e($project['name']), 'project', 'show', array('project_id' => $project['id'])) ?>
+                </span>
                 </td>
                 <td>
+                 <div class="cambiocolor">
                     <?= $project['start_date'] ?>
+                </div>
                 </td>
                 <td>
+                 <div class="cambiocolor">
                     <?= $project['end_date'] ?>
+                </div>
                 </td>
                 <?php if ($this->user->hasAccess('projectuser', 'managers')): ?>
                     <td>
+                     <div class="cambiocolor">
                         <?= $this->render('project/roles', array('roles' => $project, 'role' => \Kanboard\Core\Security\Role::PROJECT_MANAGER)) ?>
+                    </div>
                     </td>
                     <td>
+                     <div class="cambiocolor">
                         <?php if ($project['is_everybody_allowed'] == 1): ?>
                             <?= t('Everybody') ?>
                         <?php else: ?>
                             <?= $this->render('project/roles', array('roles' => $project, 'role' => \Kanboard\Core\Security\Role::PROJECT_MEMBER)) ?>
                         <?php endif ?>
+                    </div>
                     </td>
                 <?php endif ?>
                 <td class="dashboard-project-stats">

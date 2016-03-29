@@ -2,6 +2,7 @@
     <?= $this->hook->render('template:project:header:before', array('project' => $project)) ?>
 
     <div class="dropdown">
+       <span class="cambio">
         <i class="fa fa-caret-down"></i> <a href="#" class="dropdown-menu"><?= t('Actions') ?></a>
         <ul>
             <?php if (isset($is_board)): ?>
@@ -34,7 +35,10 @@
             <?php endif ?>
             <?= $this->render('project/dropdown', array('project' => $project)) ?>
         </ul>
+       </span>
     </div>
+
+
     <ul class="views">
         <li <?= $filters['controller'] === 'board' ? 'class="active"' : '' ?>>
             <i class="fa fa-th fa-fw"></i>
@@ -79,6 +83,7 @@
 
         <?php if (isset($users_list)): ?>
             <div class="dropdown filters">
+            <span class="cambio">
             <i class="fa fa-caret-down"></i> <a href="#" class="dropdown-menu"><?= t('Users') ?></a>
             <ul>
                 <li><a href="#" class="filter-helper" data-append-filter="assignee:nobody"><?= t('Not assigned') ?></a></li>
@@ -86,6 +91,7 @@
                     <li><a href="#" class="filter-helper" data-append-filter='assignee:"<?= $this->e($user) ?>"'><?= $this->e($user) ?></a></li>
                 <?php endforeach ?>
             </ul>
+            </span>
             </div>
         <?php endif ?>
 
@@ -103,4 +109,5 @@
     </div>
 
     <?= $this->hook->render('template:project:header:after', array('project' => $project)) ?>
+
 </div>

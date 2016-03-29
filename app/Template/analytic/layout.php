@@ -1,16 +1,19 @@
 <section id="main">
     <div class="page-header">
+        
         <ul>
-            <li>
+        <span class="cambio">
             <span class="dropdown">
-                <span>
-                    <i class="fa fa-caret-down"></i> <a href="#" class="dropdown-menu"><?= t('Actions') ?></a>
+              <span>
+                    <i class="fa facaret-down"></i> <a href="#" class="dropdown-menu"><?= t('Actions') ?></a>
                     <ul>
                         <?= $this->render('project/dropdown', array('project' => $project)) ?>
                     </ul>
                 </span>
             </span>
-            </li>
+            </span>
+
+            
             <li>
                 <i class="fa fa-th fa-fw"></i>
                 <?= $this->url->link(t('Back to the board'), 'board', 'show', array('project_id' => $project['id'])) ?>
@@ -29,8 +32,13 @@
                 <i class="fa fa-folder fa-fw"></i>
                 <?= $this->url->link(t('All projects'), 'project', 'index') ?>
             </li>
+            <li>
+                <i class="fa fa-life-ring fa-fw"></i>
+                <a href="/kanboard.2/?controller=app&amp;action=index" class="" title="">Resumen</a>
+            </li>
+
+            </div>
         </ul>
-    </div>
     <section class="sidebar-container" id="analytic-section">
 
         <?= $this->render('analytic/sidebar', array('project' => $project)) ?>

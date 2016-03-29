@@ -6,7 +6,8 @@
 </div>
 <?php else: ?>
 <div class="page-header">
-    <h2><?= t('New task') ?></h2>
+    <h2 class="modificar"><?= t('New task') ?></h2>
+    <hr/>
 </div>
 <?php endif ?>
 
@@ -83,6 +84,9 @@
 
     <div class="form-actions">
         <input type="submit" value="<?= t('Save') ?>" class="btn btn-blue" tabindex="11"/>
-        <?= t('or') ?> <?= $this->url->link(t('cancel'), 'board', 'show', array('project_id' => $values['project_id']), false, 'close-popover') ?>
+    
+    <div class="botoncancel">
+    <?= $this->url->link(t('cancel'), 'board', 'show', array('project_id' => $values['project_id']), false, 'close-popover') ?>
+    </div>
     </div>
 </form>
