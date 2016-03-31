@@ -17,6 +17,10 @@
                     <i class="fa fa-sliders fa-fw"></i>
                     <?= $this->url->link(t('Projects Gantt chart'), 'gantt', 'projects') ?>
                 </li>
+                <li>
+                <i class="fa fa-life-ring fa-fw"></i>
+                <?= $this->url->link('Resumen', 'app', 'index', array(), false, '', t('Dashboard')) ?>
+            </li>
             <?php endif ?>
         </ul>
     </div>
