@@ -1,4 +1,4 @@
-<section id="main">
+<section id="">
     <div class="page-header">
         
         <ul>
