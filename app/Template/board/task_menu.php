@@ -1,4 +1,5 @@
 <span class="dropdown">
+    
     <a href="#" class="dropdown-menu"><?= '#'.$task['id'] ?></a>
     <ul>
         <li><i class="fa fa-user fa-fw"></i>&nbsp;<?= $this->url->link(t('Change assignee'), 'BoardPopover', 'changeAssignee', array('task_id' => $task['id'], 'project_id' => $task['project_id']), false, 'popover') ?></li>
