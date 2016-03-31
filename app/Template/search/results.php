@@ -12,24 +12,31 @@
     </tr>
     <?php foreach ($paginator->getCollection() as $task): ?>
     <tr>
+     <div class="cambiocolor">
         <td>
             <?= $this->url->link($this->e($task['project_name']), 'board', 'show', array('project_id' => $task['project_id'])) ?>
         </td>
+
         <td class="task-table color-<?= $task['color_id'] ?>">
             <?= $this->url->link('#'.$this->e($task['id']), 'task', 'show', array('task_id' => $task['id'], 'project_id' => $task['project_id']), false, '', t('View this task')) ?>
         </td>
+
         <td>
             <?= $this->e($task['swimlane_name'] ?: $task['default_swimlane']) ?>
         </td>
+
         <td>
             <?= $this->e($task['column_name']) ?>
         </td>
+
         <td>
             <?= $this->e($task['category_name']) ?>
         </td>
+
         <td>
             <?= $this->url->link($this->e($task['title']), 'task', 'show', array('task_id' => $task['id'], 'project_id' => $task['project_id']), false, '', t('View this task')) ?>
         </td>
+
         <td>
             <?php if ($task['assignee_username']): ?>
                 <?= $this->e($task['assignee_name'] ?: $task['assignee_username']) ?>
@@ -37,9 +44,11 @@
                 <?= t('Unassigned') ?>
             <?php endif ?>
         </td>
+
         <td>
             <?= dt('%B %e, %Y', $task['date_due']) ?>
         </td>
+
         <td>
             <?php if ($task['is_active'] == \Kanboard\Model\Task::STATUS_OPEN): ?>
                 <?= t('Open') ?>
@@ -47,8 +56,11 @@
                 <?= t('Closed') ?>
             <?php endif ?>
         </td>
+
+    </div>
     </tr>
     <?php endforeach ?>
+</div>
 </table>
 
 <?= $paginator ?>
