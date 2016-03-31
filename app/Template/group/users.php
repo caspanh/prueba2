@@ -10,11 +10,13 @@
     <?php else: ?>
         <table>
             <tr>
+            <div class="cambiocolor">
                 <th><?= $paginator->order(t('Id'), 'id') ?></th>
                 <th><?= $paginator->order(t('Username'), 'username') ?></th>
                 <th><?= $paginator->order(t('Name'), 'name') ?></th>
                 <th><?= $paginator->order(t('Email'), 'email') ?></th>
                 <th><?= t('Actions') ?></th>
+            </div>
             </tr>
             <?php foreach ($paginator->getCollection() as $user): ?>
             <tr>

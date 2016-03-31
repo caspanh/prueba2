@@ -10,8 +10,9 @@
 
         <div class="form-actions">
             <?= $this->url->link(t('Yes'), 'group', 'removeUser', array('group_id' => $group['id'], 'user_id' => $user['id']), true, 'btn btn-red') ?>
-            <?= t('or') ?>
+        <div class="botoncancel">
             <?= $this->url->link(t('cancel'), 'group', 'users', array('group_id' => $group['id'])) ?>
+        </div>
         </div>
     </div>
 </section>
