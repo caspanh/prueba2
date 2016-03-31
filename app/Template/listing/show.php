@@ -24,33 +24,47 @@
                     <?= $this->url->link('#'.$this->e($task['id']), 'task', 'show', array('task_id' => $task['id'], 'project_id' => $task['project_id']), false, '', t('View this task')) ?>
                 </td>
                 <td>
+                <div class="cambiocolor">
                     <?= $this->e($task['swimlane_name'] ?: $task['default_swimlane']) ?>
+                </div>
                 </td>
                 <td>
+                <div class="cambiocolor">
                     <?= $this->e($task['column_name']) ?>
+                    </div>
                 </td>
                 <td>
+                <div class="cambiocolor">
                     <?= $this->e($task['category_name']) ?>
+                </div>
                 </td>
                 <td>
+                <div class="cambiocolor">
                     <?= $this->url->link($this->e($task['title']), 'task', 'show', array('task_id' => $task['id'], 'project_id' => $task['project_id']), false, '', t('View this task')) ?>
+                </div>
                 </td>
                 <td>
+                <div class="cambiocolor">
                     <?php if ($task['assignee_username']): ?>
                         <?= $this->e($task['assignee_name'] ?: $task['assignee_username']) ?>
                     <?php else: ?>
                         <?= t('Unassigned') ?>
                     <?php endif ?>
+                </div>
                 </td>
                 <td>
+                <div class="cambiocolor">
                     <?= dt('%B %e, %Y', $task['date_due']) ?>
+                </div>
                 </td>
                 <td>
+                <div class="cambiocolor">
                     <?php if ($task['is_active'] == \Kanboard\Model\Task::STATUS_OPEN): ?>
                         <?= t('Open') ?>
                     <?php else: ?>
                         <?= t('Closed') ?>
                     <?php endif ?>
+                </div>
                 </td>
             </tr>
             <?php endforeach ?>
