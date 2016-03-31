@@ -21,6 +21,7 @@
             </li>
             
 
+
                 <li>
                     <i class="fa fa-user fa-fw"></i>
                     <?= $this->url->link(t('User management'), 'user', 'index') ?>
@@ -30,9 +31,10 @@
                     <i class="fa fa-cog fa-fw"></i>
                     <?= $this->url->link (t('Settings'), 'config', 'index') ?>
                 </li>
-            
+
             <?php if ($this->user->hasAccess('user', 'index')): ?>
             
+
             <?php endif ?>
         </ul>
     </div>

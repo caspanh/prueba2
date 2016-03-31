@@ -6,6 +6,7 @@
             <span class="dropdown">
               <span>
                     <i class="fa fafacaret-down"></i> <a href="#" class="dropdown-menu"><?= t('Actions') ?></a>
+
                     <ul>
                         <?= $this->render('project/dropdown', array('project' => $project)) ?>
                     </ul>
@@ -33,8 +34,13 @@
                 <?= $this->url->link(t('All projects'), 'project', 'index') ?>
             </li>
             <li>
+<<<<<<< HEAD
                 <i class="fa fa-th fa-fw"></i>
                 <?= $this->url->link('Resumen', 'app', 'index', array(), false, '', t('Dashboard')) ?>
+=======
+                <i class="fa fa-life-ring fa-fw"></i>
+                <a href="/kanboard.2/?controller=app&amp;action=index" class="" title="">Resumen</a>
+>>>>>>> abced81603aa8533e144f9ec611d15b58df2f921
             </li>
 
             </div>

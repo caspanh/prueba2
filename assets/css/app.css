@@ -1411,10 +1411,9 @@ a.fc-more:hover{
  .fauser:before{
  	content:"\f007";
  	color: #FFF200;
- 	font-size: 13px;
     border-radius: 100%;
     background: #000;
-    padding: 4.5px 6px;
+    padding: 4px 6px;
     margin-left: -7px;
 
 
@@ -2212,14 +2211,15 @@ textarea{
 	border-radius: 8px;
 	}
 select{
+
 	max-width:100%;
+
 	min-height: 27px;
     background: #417BA9;
     border-radius: 10px;
     margin-right: 5px;
     padding: 5px;  
     color:#FFF; 
-   
 	}
 select:focus{
 	outline:0
@@ -2641,6 +2641,7 @@ nav .active a{
 			width: 100%;
 			padding-left: 2px;
 		}
+
 	select{
 	font-size:9px;
 	}
@@ -3407,6 +3408,8 @@ li.active a:hover {
 		margin-top:15px;
 		width:100%
 
+
+
 		}
 
 	header h1 {
@@ -3423,7 +3426,6 @@ li.active a:hover {
 		tr{
 			font-size: 15%;
 		}
-
 	input.form-input-large {
 		 width: 72%;
    		 margin-left: 5px;
@@ -3436,7 +3438,6 @@ li.active a:hover {
 	.table-fixed{
 		width: 98%;
     	margin-left: 5.5px;
-
 	}
 
 	.table-fixed td{
