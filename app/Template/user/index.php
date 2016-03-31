@@ -12,6 +12,7 @@
     <?php if ($paginator->isEmpty()): ?>
         <p class="alert"><?= t('No user') ?></p>
     <?php else: ?>
+
         <table>
             <tr>
                 <th><?= $paginator->order(t('Id'), 'id') ?></th>
@@ -25,17 +26,23 @@
             </tr>
             <?php foreach ($paginator->getCollection() as $user): ?>
             <tr>
-                <td>
+                <td> <div class="cambiocolor">
                     <?= $this->url->link('#'.$user['id'], 'user', 'show', array('user_id' => $user['id'])) ?>
+                </div>
                 </td>
                 <td>
-                    <?= $this->url->link($this->e($user['username']), 'user', 'show', array('user_id' => $user['id'])) ?>
+                 <div class="cambiocolor">
+                    <?= $this->url->link($this->e($user['username']), 'user', 'show', array('user_id' => $user['id'])) ?></div>
                 </td>
                 <td>
+                 <div class="cambiocolor">
                     <?= $this->e($user['name']) ?>
+                </div>
                 </td>
                 <td>
+                 <div class="cambiocolor">
                     <a href="mailto:<?= $this->e($user['email']) ?>"><?= $this->e($user['email']) ?></a>
+                 </div>
                 </td>
                 <td>
                     <?= $this->user->getRoleName($user['role']) ?>

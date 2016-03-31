@@ -14,10 +14,10 @@
     </tr>
     <?php foreach ($last_logins as $login): ?>
     <tr>
-        <td><?= dt('%B %e, %Y at %k:%M %p', $login['date_creation']) ?></td>
-        <td><?= $this->e($login['auth_type']) ?></td>
-        <td><?= $this->e($login['ip']) ?></td>
-        <td><?= $this->e($login['user_agent']) ?></td>
+        <td><div class="cambiocolor"><?= dt('%B %e, %Y at %k:%M %p', $login['date_creation']) ?></div></td>
+        <td><div class="cambiocolor"><?= $this->e($login['auth_type']) ?></div></td>
+        <td><div class="cambiocolor"><?= $this->e($login['ip']) ?></div></td>
+        <td><div class="cambiocolor"><?= $this->e($login['user_agent']) ?></div></td>
     </tr>
     <?php endforeach ?>
     </table>

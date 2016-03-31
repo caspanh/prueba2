@@ -1,7 +1,7 @@
 <div class="sidebar">
     <h2><?= t('Information') ?></h2>
     <ul>
-        <li <?= $this->app->checkMenuSelection('user', 'show') ?>>
+    <li <?= $this->app->checkMenuSelection('user', 'show') ?>>
             <?= $this->url->link(t('Summary'), 'user', 'show', array('user_id' => $user['id'])) ?>
         </li>
         <?php if ($this->user->isAdmin()): ?>
@@ -25,6 +25,7 @@
         <?php endif ?>
 
         <?= $this->hook->render('template:user:sidebar:information') ?>
+    
     </ul>
 
     <h2><?= t('Actions') ?></h2>

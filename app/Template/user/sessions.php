@@ -15,11 +15,11 @@
     </tr>
     <?php foreach ($sessions as $session): ?>
     <tr>
-        <td><?= dt('%B %e, %Y at %k:%M %p', $session['date_creation']) ?></td>
-        <td><?= dt('%B %e, %Y at %k:%M %p', $session['expiration']) ?></td>
-        <td><?= $this->e($session['ip']) ?></td>
-        <td><?= $this->e($session['user_agent']) ?></td>
-        <td><?= $this->url->link(t('Remove'), 'User', 'removeSession', array('user_id' => $user['id'], 'id' => $session['id']), true) ?></td>
+        <td><div class="cambiocolor"><?= dt('%B %e, %Y at %k:%M %p', $session['date_creation']) ?></div></td>
+        <td><div class="cambiocolor"><?= dt('%B %e, %Y at %k:%M %p', $session['expiration']) ?></div></td>
+        <td><div class="cambiocolor"><?= $this->e($session['ip']) ?></div></td>
+        <td><div class="cambiocolor"><?= $this->e($session['user_agent']) ?></div></td>
+        <td><div class="cambiocolor"><?= $this->url->link(t('Remove'), 'User', 'removeSession', array('user_id' => $user['id'], 'id' => $session['id']), true) ?></div></td>
     </tr>
     <?php endforeach ?>
     </table>

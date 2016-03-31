@@ -20,7 +20,8 @@
 
     <div class="form-actions">
         <input type="submit" value="<?= t('Save') ?>" class="btn btn-blue"/>
-        <?= t('or') ?>
+    <div class="botoncancel">
         <?= $this->url->link(t('cancel'), 'user', 'show', array('user_id' => $user['id'])) ?>
+    </div>
     </div>
 </form>
