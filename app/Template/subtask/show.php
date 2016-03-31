@@ -19,13 +19,16 @@
             <?php foreach ($subtasks as $subtask): ?>
             <tr>
                 <td>
+                <div class="cambiocolor">
                     <?php if ($editable): ?>
                         <?= $this->subtask->toggleStatus($subtask, 'task') ?>
                     <?php else: ?>
                         <?= $this->render('subtask/icons', array('subtask' => $subtask)) . $this->e($subtask['title']) ?>
                     <?php endif ?>
+                </div>
                 </td>
                 <td>
+                <div class="cambiocolor">
                     <?php if (! empty($subtask['username'])): ?>
                         <?php if ($editable): ?>
                             <?= $this->url->link($this->e($subtask['name'] ?: $subtask['username']), 'user', 'show', array('user_id' => $subtask['user_id'])) ?>
@@ -33,6 +36,7 @@
                             <?= $this->e($subtask['name'] ?: $subtask['username']) ?>
                         <?php endif ?>
                     <?php endif ?>
+                <div class="cambiocolor">
                 </td>
                 <td>
                     <ul class="no-bullet">
@@ -53,8 +57,10 @@
                                 (<?= $this->dt->age($subtask['timer_start_date']) ?>)
                             <?php else: ?>
                                 <i class="fa fa-play-circle-o"></i>
+                                <div class="cambiocolor">
                                 <?= $this->url->link(t('Start timer'), 'timer', 'subtask', array('timer' => 'start', 'project_id' => $task['project_id'], 'task_id' => $subtask['task_id'], 'subtask_id' => $subtask['id'])) ?>
                             <?php endif ?>
+                            </div>
                         </li>
                         <?php endif ?>
                     </ul>
