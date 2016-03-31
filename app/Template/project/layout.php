@@ -4,7 +4,7 @@
             <li>
             <span class="dropdown">
                 <span>
-                    <i class="fa fa-caret-down"></i> <a href="#" class="dropdown-menu"><?= t('Actions') ?></a>
+                    <i class="fa facaret-down"></i> <a href="#" class="dropdown-menu"><?= t('Actions') ?></a>
                     <ul>
                         <?= $this->render('project/dropdown', array('project' => $project)) ?>
                     </ul>
@@ -22,6 +22,16 @@
             <li>
                 <i class="fa fa-folder fa-fw"></i>
                 <?= $this->url->link(t('All projects'), 'project', 'index') ?>
+            </li>
+
+             <li>
+                <i class="fa fa-user fa-fw"></i>
+                <?= $this->url->link(t('Project management'), 'project', 'index') ?>
+            </li>
+            <li>
+                <i class="fa fa-life-ring fa-fw"></i>
+                <?= $this->url->link('Resumen', 'app', 'index', array(), false, '', t('Dashboard')) ?>
+
             </li>
         </ul>
     </div>

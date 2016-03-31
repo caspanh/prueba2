@@ -6,9 +6,11 @@
 
     <div class="listing">
         <ul class="no-bullet">
+           <div class="cambiocolor">
             <li><strong><i class="fa fa-share-alt"></i> <?= $this->url->link(t('Public link'), 'board', 'readonly', array('token' => $project['token']), false, '', '', true) ?></strong></li>
             <li><strong><i class="fa fa-rss-square"></i> <?= $this->url->link(t('RSS feed'), 'feed', 'project', array('token' => $project['token']), false, '', '', true) ?></strong></li>
-            <li><strong><i class="fa fa-calendar"></i> <?= $this->url->link(t('iCal feed'), 'ical', 'project', array('token' => $project['token']), false, '', '', true) ?></strong></li>
+            <li><strong><i class="fa fa-calendar"></i> <?= $this->url->link(t('iCal feed'), 'ical', 'project', array('token' => $project['token']), false, '', '', true) ?></strong></li>   
+        </div>
         </ul>
     </div>
 
