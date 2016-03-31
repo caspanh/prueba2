@@ -1411,9 +1411,10 @@ a.fc-more:hover{
  .fauser:before{
  	content:"\f007";
  	color: #FFF200;
+ 	font-size: 13px;
     border-radius: 100%;
     background: #000;
-    padding: 4px 6px;
+    padding: 4.5px 6px;
     margin-left: -7px;
 
 
@@ -1425,7 +1426,7 @@ a.fc-more:hover{
  .fa-th-large:before{content:"\f009"}
  .fa-th:before{content:"\f00a"}
  .fa-th-list:before{content:"\f00b"}
- .fa-check:before{content:"\f00c"}
+ .fa-check:before{content:"\f00c"; color:#000;}
  .fa-remove:before,.fa-close:before,.fa-times:before{content:"\f00d"}
  .fa-search-plus:before{content:"\f00e"}
  .fa-search-minus:before{content:"\f010"}
@@ -1592,7 +1593,22 @@ a.fc-more:hover{
  .fa-feed:before,.fa-rss:before{content:"\f09e"}
  .fa-hdd-o:before{content:"\f0a0"}
  .fa-bullhorn:before{content:"\f0a1"}
- .fa-bell:before{content:"\f0f3"}
+ .fa-bell:before{
+	content:"\f0f3";
+	    border-radius: 100%;
+    font-size: 12px;
+    background: #000;
+    padding: 5px 5px;
+    margin-right: 8px;
+
+}
+.sinnotification{
+color:#fff200;
+}
+
+.connotification{
+color:#DE3414;
+}
  .fa-certificate:before{content:"\f0a3"}
  .fa-hand-o-right:before{content:"\f0a4"}
  .fa-hand-o-left:before{content:"\f0a5"}
@@ -1662,7 +1678,7 @@ a.fc-more:hover{
  .fa-legal:before,.fa-gavel:before{content:"\f0e3"}
  .fa-dashboard:before,.fa-tachometer:before{content:"\f0e4"}
  .fa-comment-o:before{content:"\f0e5"}
- .fa-comments-o:before{content:"\f0e6"}
+ .fa-comments-o:before{content:"\f0e6"; color:#000;}
  .fa-flash:before,.fa-bolt:before{content:"\f0e7"}
  .fa-sitemap:before{content:"\f0e8"}
  .fa-umbrella:before{content:"\f0e9"}
@@ -1770,16 +1786,16 @@ a.fc-more:hover{
 
 
 .c3 svg{
-	font:10px sans-serif
+	font:10px sans-serif;
 	}
 .c3 line,.c3 path{
 	fill:none;
-	stroke:#000
+	stroke:#000;
 	}
 .c3 text{
 	-webkit-user-select:none;
 	-moz-user-select:none;
-	user-select:none
+	user-select:none;
 	}
 .c3-bars path,.c3-event-rect,.c3-legend-item-tile,.c3-xgrid-focus,.c3-ygrid{
 	shape-rendering:crispEdges
@@ -1958,10 +1974,10 @@ hr{
 	bottom:3px
 	}
 .web-notification-icon{
-	color:#36c
+	color:red;
 	}
 .web-notification-icon:focus,.web-notification-icon:hover{
-	color:#000
+	color:#fff200;;
 	}
 
 .sidebar a {
@@ -2151,7 +2167,12 @@ th a:focus,th a:hover{
 .column-50{width:50%}
 .column-60{width:60%}
 .column-70{width:70%}
-form{margin-bottom:20px}
+
+form{
+	margin-bottom:20px;
+	margin-left: 10px;
+
+}
 
 label{
 	cursor:pointer;
@@ -2191,7 +2212,9 @@ textarea{
 	border-radius: 8px;
 	}
 select{
-	max-width:95%
+
+	max-width:100%;
+
 	min-height: 27px;
     background: #417BA9;
     border-radius: 10px;
@@ -2313,7 +2336,7 @@ ul.form-tabs-nav{
 	margin-right:20px
 	}
 .form-tab a{
-	color:#ccc;
+	color:#888787;
 	font-weight:bold;
 	text-decoration:none
 	}
@@ -2571,6 +2594,7 @@ nav .active a{
 	}
 .page-header h2{
 	margin:0;
+	margin-left: 10px;
 	padding:0;
 	font-size:1.4em;
 	font-weight:bold;
@@ -2618,7 +2642,10 @@ nav .active a{
 			width: 100%;
 			padding-left: 2px;
 		}
-	
+
+	select{
+	font-size:9px;
+	}
 
 	}
 
@@ -3382,6 +3409,7 @@ li.active a:hover {
 		margin-top:15px;
 		width:100%
 
+
 		}
 
 	header h1 {
@@ -3399,6 +3427,7 @@ li.active a:hover {
 			font-size: 15%;
 		}
 
+
 	input.form-input-large {
 		 width: 72%;
    		 margin-left: 5px;
@@ -3412,11 +3441,13 @@ li.active a:hover {
 		width: 98%;
     	margin-left: 5.5px;
 
+
 	}
 
 	.table-fixed td{
 		font-size: 9px;
 	}
+
 
 	.table-fixed th {
 		font-size: 6.7px;
@@ -3544,12 +3575,14 @@ width: 80px;
 
 		.table-fixed th{
 			font-size:75%;
+
 		}
 	.sidebar-content{
 		margin-left: 28.5%;
    		width:70%;
 	
 		}
+
 	.chosen-container-single .chosen-single {
 		width: 70%;
 		}

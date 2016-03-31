@@ -27,11 +27,11 @@
              <li>
                 <i class="fa fa-user fa-fw"></i>
 
-                <a href="/kanboard.2/?controller=project&amp;action=index" class="" title="">Administracion del proyecto</a>
+                <?= $this->url->link(t('Project management'), 'project', 'index') ?>
             </li>
             <li>
                 <i class="fa fa-life-ring fa-fw"></i>
-                <a href="/kanboard.2/?controller=app&amp;action=index" class="" title="Tablero"> Resumen </a>
+                <?= $this->url->link('Resumen', 'app', 'index', array(), false, '', t('Dashboard')) ?>
 
             </li>
         </ul>

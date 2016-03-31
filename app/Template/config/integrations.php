@@ -11,19 +11,20 @@
     <h3><i class="fa fa-google"></i> <?= t('Google Authentication') ?></h3>
     <div class="listing">
     <input type="text" class="auto-select" readonly="readonly" value="<?= $this->url->href('oauth', 'google', array(), false, '', true) ?>"/><br/>
-    <p class="form-help"><?= $this->url->doc(t('Help on Google authentication'), 'google-authentication') ?></p>
+    <p class="form-help">
+    <span class="cambiocolor"><?= $this->url->doc(t('Help on Google authentication'), 'google-authentication') ?></samp></p>
     </div>
 
     <h3><i class="fa fa-github"></i> <?= t('Github Authentication') ?></h3>
     <div class="listing">
     <input type="text" class="auto-select" readonly="readonly" value="<?= $this->url->href('oauth', 'github', array(), false, '', true) ?>"/><br/>
-    <p class="form-help"><?= $this->url->doc(t('Help on Github authentication'), 'github-authentication') ?></p>
+    <p class="form-help"><span class="cambiocolor"><?= $this->url->doc(t('Help on Github authentication'), 'github-authentication') ?></span></p>
     </div>
 
     <h3><img src="<?= $this->url->dir() ?>assets/img/gitlab-icon.png"/>&nbsp;<?= t('Gitlab Authentication') ?></h3>
     <div class="listing">
     <input type="text" class="auto-select" readonly="readonly" value="<?= $this->url->href('oauth', 'gitlab', array(), false, '', true) ?>"/><br/>
-    <p class="form-help"><?= $this->url->doc(t('Help on Gitlab authentication'), 'gitlab-authentication') ?></p>
+    <p class="form-help"><span class="cambiocolor"><?= $this->url->doc(t('Help on Gitlab authentication'), 'gitlab-authentication') ?></span></p>
     </div>
 
     <h3><img src="<?= $this->url->dir() ?>assets/img/gravatar-icon.png"/>&nbsp;<?= t('Gravatar') ?></h3>

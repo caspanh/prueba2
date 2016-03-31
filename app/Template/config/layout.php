@@ -3,26 +3,30 @@
         <ul>
            <li>
                 <i class="fa fa-folder fa-fw"></i>
-                <a href="/kanboard.2/?controller=project&amp;action=index" class="" title="">Administración del proyecto</a>
+
+                <?= $this->url->link(t('Project management'), 'project', 'index') ?>
             </li>
         	<li>
                 <i class="fa fa-user fa-fw"></i>
-             	<a href="/kanboard.2/?controller=user&amp;action=index" class="" title="">Gestión de Usuarios</a>
+             	<?= $this->url->link(t('User management'), 'user', 'index') ?>
             </li>
             <li>
                 <i class="fa fa-user fa-fw"></i>
-                <a href="/kanboard.2/?controller=projectuser&amp;action=managers" class="" title="">Resumen de Usuario</a>
+                <?= $this->url->link(t('Users overview'), 'projectuser', 'managers') ?>
+
             </li>
             
             <li>
                 <i class="fa fa-life-ring fa-fw"></i>
-                <a href="/kanboard.2/?controller=app&amp;action=index" class="" title="Tablero"> Resumen </a>
+                <?= $this->url->link('Resumen', 'app', 'index', array(), false, '', t('Dashboard')) ?>
 
             </li>
 
              <li>
                 <i class="fa fa-life-ring fa-fw"></i>
-                <a href="/kanboard.2/?controller=gantt&amp;action=projects" class="" title="">Diagrama de Gantt</a>
+
+                <?= $this->url->link(t('Gantt chart'), 'gantt', 'projects') ?>
+
             </li>
         </div>
         </ul>

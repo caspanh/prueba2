@@ -19,7 +19,8 @@
                 </li>
                 <li>
                 <i class="fa fa-life-ring fa-fw"></i>
-                <a href="/kanboard.2/?controller=app&amp;action=index" class="" title="Tablero"> Resumen </a>
+
+                <?= $this->url->link('Resumen', 'app', 'index', array(), false, '', t('Dashboard')) ?>
 
             </li>
             <?php endif ?>

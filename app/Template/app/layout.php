@@ -20,8 +20,6 @@
                 <?= $this->url->link(t('Project management'), 'project', 'index') ?>
             </li>
             
-
-            <?php if ($this->user->hasAccess('user', 'index')): ?>
                 <li>
                     <i class="fa fa-user fa-fw"></i>
                     <?= $this->url->link(t('User management'), 'user', 'index') ?>
@@ -32,6 +30,10 @@
                     <?= $this->url->link (t('Settings'), 'config', 'index') ?>
                 </li>
             
+
+            <?php if ($this->user->hasAccess('user', 'index')): ?>
+            
+
             <?php endif ?>
         </ul>
     </div>

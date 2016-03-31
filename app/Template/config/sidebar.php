@@ -35,9 +35,7 @@
         <li <?= $this->app->checkMenuSelection('config', 'api') ?>>
             <?= $this->url->link(t('API'), 'config', 'api') ?>
         </li>
-        <li>
-            <?= $this->url->link(t('Documentation'), 'doc', 'show') ?>
-        </li>
+        
         <?= $this->hook->render('template:config:sidebar') ?>
     
     </ul>

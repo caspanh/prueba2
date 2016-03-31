@@ -15,7 +15,7 @@
             <?php endif ?>
         </h1>
         <ul>
-            <?php if (isset($board_selector) && ! empty($board_selector)): ?>
+          
             <li>
                 <select id="board-selector"
                         class="chosen-select select-auto-redirect"
@@ -31,12 +31,21 @@
                     <?php endforeach ?>
                 </select>
             </li>
-            <?php endif ?>
+            
             <li>
-                <?php if ($this->user->hasNotifications()): ?>
-                    <span class="notification">
-                        <?= $this->url->link('<i class="fa fa-bell web-notification-icon"></i>', 'app', 'notifications', array('user_id' => $this->user->getId()), false, '', t('Unread notifications')) ?>
+              <?php if ($this->user->hasNotifications()): ?>
+        
+                  <span class="connotification">
+                        <?= $this->url->link('<i class="fa fa-bell connotification"></i>', 'app', 'notifications', array('user_id' => $this->user->getId()), false, '', t('Unread notifications')) ?>
+                    </span> 
+
+                      <?php else: ?>
+
+                    
+                      <span id="sinnotification">
+                        <?= $this->url->link('<i class="fa fa-bell sinnotification"></i>', 'app', 'notifications', array('user_id' => $this->user->getId()), false, '', t('Unread notifications')) ?>
                     </span>
+
                 <?php endif ?>
 
                 <span class="dropdown">
