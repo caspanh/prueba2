@@ -17,14 +17,19 @@
         </tr>
         <?php foreach ($metrics as $metric): ?>
         <tr>
-            <td>
+            <td><div class="cambiocolor">
                 <?= $this->e($metric['column_title']) ?>
+            </div>
             </td>
             <td>
+            <div class="cambiocolor">
                 <?= $metric['nb_tasks'] ?>
+            </div>
             </td>
             <td>
+            <div class="cambiocolor">
                 <?= n($metric['percentage']) ?>%
+            </div>
             </td>
         </tr>
         <?php endforeach ?>
