@@ -14,11 +14,11 @@
         </tr>
         <?php foreach ($subtask_paginator->getCollection() as $record): ?>
         <tr>
-            <td><?= $this->url->link($this->e($record['user_fullname'] ?: $record['username']), 'user', 'show', array('user_id' => $record['user_id'])) ?></td>
-            <td><?= t($record['subtask_title']) ?></td>
-            <td><?= dt('%B %e, %Y at %k:%M %p', $record['start']) ?></td>
-            <td><?= dt('%B %e, %Y at %k:%M %p', $record['end']) ?></td>
-            <td><?= n($record['time_spent']).' '.t('hours') ?></td>
+            <td><div class="cambiocolor"><?= $this->url->link($this->e($record['user_fullname'] ?: $record['username']), 'user', 'show', array('user_id' => $record['user_id'])) ?></div></td>
+            <td><div class="cambiocolor"><?= t($record['subtask_title']) ?></div></td>
+            <td><div class="cambiocolor"><?= dt('%B %e, %Y at %k:%M %p', $record['start']) ?></div></td>
+            <td><div class="cambiocolor"><?= dt('%B %e, %Y at %k:%M %p', $record['end']) ?></div></td>
+            <td><div class="cambiocolor"><?= n($record['time_spent']).' '.t('hours') ?></div></td>
         </tr>
         <?php endforeach ?>
     </table>

@@ -9,7 +9,8 @@
 
     <div class="form-actions">
         <?= $this->url->link(t('Yes'), 'task', 'remove', array('task_id' => $task['id'], 'project_id' => $task['project_id'], 'confirmation' => 'yes'), true, 'btn btn-red') ?>
-        <?= t('or') ?>
+    <div class="botoncancel">
         <?= $this->url->link(t('cancel'), 'task', 'show', array('task_id' => $task['id'], 'project_id' => $task['project_id'])) ?>
+    </div>
     </div>
 </div>
