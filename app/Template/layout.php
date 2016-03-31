@@ -25,7 +25,7 @@
         <?= $this->hook->asset('css', 'template:layout:css') ?>
         <?= $this->hook->asset('js', 'template:layout:js') ?>
 
-        <link rel="icon" type="image/png" href="<?= $this->url->dir() ?>assets/img/logo11.png">
+        <link rel="icon" type="image/png" href="<?= $this->url->dir() ?>assets/img/fav.png">
         <link rel="apple-touch-icon" href="<?= $this->url->dir() ?>assets/img/touch-icon-iphone.png">
         <link rel="apple-touch-icon" sizes="72x72" href="<?= $this->url->dir() ?>assets/img/touch-icon-ipad.png">
         <link rel="apple-touch-icon" sizes="114x114" href="<?= $this->url->dir() ?>assets/img/touch-icon-iphone-retina.png">
