@@ -31,13 +31,13 @@ class RouteProvider implements ServiceProviderInterface
             $container['route']->enable();
 
             // Dashboard
-            $container['route']->addRoute('dashboard', 'app', 'index');
-            $container['route']->addRoute('dashboard/:user_id', 'app', 'index');
-            $container['route']->addRoute('dashboard/:user_id/projects', 'app', 'projects');
-            $container['route']->addRoute('dashboard/:user_id/tasks', 'app', 'tasks');
-            $container['route']->addRoute('dashboard/:user_id/subtasks', 'app', 'subtasks');
-            $container['route']->addRoute('dashboard/:user_id/calendar', 'app', 'calendar');
-            $container['route']->addRoute('dashboard/:user_id/activity', 'app', 'activity');
+            $container['route']->addRoute('tablero', 'apli', 'inicio');
+            $container['route']->addRoute('tablero/:user_id', 'app', 'index');
+            $container['route']->addRoute('tablero/:user_id/projects', 'app', 'projects');
+            $container['route']->addRoute('tablero/:user_id/tasks', 'app', 'tasks');
+            $container['route']->addRoute('tablero/:user_id/subtasks', 'app', 'subtasks');
+            $container['route']->addRoute('tablero/:user_id/calendar', 'app', 'calendar');
+            $container['route']->addRoute('tablero/:user_id/activity', 'app', 'activity');
 
             // Search routes
             $container['route']->addRoute('search', 'search', 'index');
