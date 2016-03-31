@@ -35,17 +35,17 @@
         </div>
     </div>
 
-    <div class="form-help"><?= $this->url->doc(t('Write your text in Markdown'), 'syntax-guide') ?></div>
+    <div class="form-help"><span class="cambiocolor"><?= $this->url->doc(t('Write your text in Markdown'), 'syntax-guide') ?></span></div>
 
     <div class="form-actions">
         <input type="submit" value="<?= t('Save') ?>" class="btn btn-blue"/>
-        <?php if (! isset($skip_cancel)): ?>
-            <?= t('or') ?>
+        <div class="botoncancel"><?php if (! isset($skip_cancel)): ?>            
             <?php if (isset($ajax)): ?>
                 <?= $this->url->link(t('cancel'), 'board', 'show', array('project_id' => $task['project_id'])) ?>
             <?php else: ?>
                 <?= $this->url->link(t('cancel'), 'task', 'show', array('task_id' => $task['id'], 'project_id' => $task['project_id'])) ?>
             <?php endif ?>
         <?php endif ?>
+        </div>
     </div>
 </form>

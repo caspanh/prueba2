@@ -15,13 +15,13 @@
 
         <?php if (! isset($preview)): ?>
         <ul class="comment-actions">
-            <li><a href="#comment-<?= $comment['id'] ?>"><?= t('link') ?></a></li>
-            <?php if ($editable && ($this->user->isAdmin() || $this->user->isCurrentUser($comment['user_id']))): ?>
+            <li><span class="cambiocolor"><a href="#comment-<?= $comment['id'] ?>"><?= t('link') ?></a></li>
+            <?php if ($editable && ($this->user->isAdmin() || $this->user->isCurrentUser($comment['user_id']))): ?></span>
                 <li>
-                    <?= $this->url->link(t('remove'), 'comment', 'confirm', array('task_id' => $task['id'], 'project_id' => $task['project_id'], 'comment_id' => $comment['id'])) ?>
+                    <span class="cambiocolor"><?= $this->url->link(t('remove'), 'comment', 'confirm', array('task_id' => $task['id'], 'project_id' => $task['project_id'], 'comment_id' => $comment['id'])) ?></span>
                 </li>
                 <li>
-                    <?= $this->url->link(t('edit'), 'comment', 'edit', array('task_id' => $task['id'], 'project_id' => $task['project_id'], 'comment_id' => $comment['id'])) ?>
+                   <span class="cambiocolor"> <?= $this->url->link(t('edit'), 'comment', 'edit', array('task_id' => $task['id'], 'project_id' => $task['project_id'], 'comment_id' => $comment['id'])) ?></span>
                 </li>
             <?php endif ?>
         </ul>
