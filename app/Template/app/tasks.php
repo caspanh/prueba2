@@ -18,12 +18,17 @@
                 <?= $this->url->link('#'.$task['id'], 'task', 'show', array('task_id' => $task['id'], 'project_id' => $task['project_id'])) ?>
             </td>
             <td>
+            <div class="cambiocolor">
                 <?= $this->url->link($this->e($task['project_name']), 'board', 'show', array('project_id' => $task['project_id'])) ?>
+            </div>
             </td>
             <td>
+            <div class="cambiocolor">
                 <?= $this->url->link($this->e($task['title']), 'task', 'show', array('task_id' => $task['id'], 'project_id' => $task['project_id'])) ?>
+            </div>
             </td>
             <td>
+            <div class="cambiocolor">
                 <?php if (! empty($task['time_spent'])): ?>
                     <strong><?= $this->e($task['time_spent']).'h' ?></strong> <?= t('spent') ?>
                 <?php endif ?>
@@ -31,9 +36,12 @@
                 <?php if (! empty($task['time_estimated'])): ?>
                     <strong><?= $this->e($task['time_estimated']).'h' ?></strong> <?= t('estimated') ?>
                 <?php endif ?>
+            </div>
             </td>
             <td>
+            <div class="cambiocolor">
                 <?= dt('%B %e, %Y', $task['date_due']) ?>
+            </div>
             </td>
         </tr>
         <?php endforeach ?>

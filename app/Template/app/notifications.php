@@ -22,6 +22,7 @@
         <?php foreach ($notifications as $notification): ?>
         <tr>
             <td>
+            <div class="cambiocolor">
                 <?php if ($this->text->contains($notification['event_name'], 'subtask')): ?>
                     <i class="fa fa-tasks fa-fw"></i>
                 <?php elseif ($this->text->contains($notification['event_name'], 'task.move')): ?>
@@ -47,13 +48,18 @@
                 <?php else: ?>
                     <?= $this->url->link($notification['title'], 'task', 'show', array('task_id' => $notification['event_data']['task']['id'], 'project_id' => $notification['event_data']['task']['project_id'])) ?>
                 <?php endif ?>
+                </div>
             </td>
             <td>
+            <div class="cambiocolor">
                 <?= dt('%B %e, %Y at %k:%M %p', $notification['date_creation']) ?>
+                </div>
             </td>
             <td>
+            <div class="cambiocolor">
                 <i class="fa fa-check fa-fw"></i>
                 <?= $this->url->link(t('Mark as read'), 'webNotification', 'remove', array('user_id' => $user['id'], 'notification_id' => $notification['id'])) ?>
+                </div>
             </td>
         </tr>
         <?php endforeach ?>
