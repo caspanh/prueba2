@@ -2,7 +2,7 @@
     <h2><?= t('Notifications') ?></h2>
 </div>
 
-<form method="post" action="<?= $this->url->href('user', 'notifications', array('user_id' => $user['id'])) ?>" autocomplete="on">
+<form method="post" action="<?= $this->url->href('user', 'notifications', array('user_id' => $user['id'])) ?>" autocomplete="off">
 
     <?= $this->form->csrf() ?>
     <?= $this->form->checkbox('notifications_enabled', t('Enable notifications'), '1', $notifications['notifications_enabled'] == 1)  ?><br>
