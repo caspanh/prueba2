@@ -1431,16 +1431,9 @@ a.fc-more:hover{
  }
   .fath:before{
  	content:"\f00a";
- 	color: #000;
+ 	color: #615858;
  }
-.fath:before{
- 	content:"\f00a";
- 	color: #000;
- }
- .fath:before{
- 	content:"\f00a";
- 	color: #000;
- }
+
 
 
  .fa-th-list:before{content:"\f00b"}
@@ -1457,7 +1450,7 @@ a.fc-more:hover{
  }
  .facog:before{
  	content:"\f013";
- 	color:#000;
+ 	color:#615858;
  }
 
  .facog:hover{
