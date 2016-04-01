@@ -4,7 +4,8 @@
 <?php if (empty($types)): ?>
     <p class="alert"><?= t('No plugin has registered a project notification method. You can still configure individual notifications in your user profile.') ?></p>
 <?php else: ?>
-    <form method="post" action="<?= $this->url->href('project', 'notifications', array('project_id' => $project['id'])) ?>" autocomplete="off">
+    
+    <form method="post" action="<?= $this->url->href('project', 'notifications', array('project_id' => $project['id'])) ?>" autocomplete="on">
 
         <?= $this->form->csrf() ?>
 
