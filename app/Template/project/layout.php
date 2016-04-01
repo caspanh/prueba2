@@ -26,6 +26,7 @@
 
              <li>
                 <i class="fa fa-user fa-fw"></i>
+
                 <?= $this->url->link(t('Project management'), 'project', 'index') ?>
             </li>
             <li>

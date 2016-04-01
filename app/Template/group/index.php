@@ -34,7 +34,9 @@
                 </td>
                 <td>
                     <div class="dropdown">
+
                     <a href="#" class="dropdown-menu dropdown-menu-link-icon"><i class="fa facog fa-fw"></i><i class="fa fafacaret-down"></i></a>
+
                     <ul>
                     <div class="cambiocolor">
                         <li><?= $this->url->link(t('Add group member'), 'group', 'associate', array('group_id' => $group['id'])) ?></li>

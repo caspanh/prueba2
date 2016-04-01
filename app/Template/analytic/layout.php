@@ -5,7 +5,8 @@
         <span class="cambio">
             <span class="dropdown">
               <span>
-                    <i class="fa fafacaret-down"></i> <a href="#" class="dropdown-menu"><?= t('Actions') ?></a>
+                    <i class="fa facaret-down"></i> <a href="#" class="dropdown-menu"><?= t('Actions') ?></a>
+
                     <ul>
                         <?= $this->render('project/dropdown', array('project' => $project)) ?>
                     </ul>
@@ -33,6 +34,7 @@
                 <?= $this->url->link(t('All projects'), 'project', 'index') ?>
             </li>
             <li>
+
                 <i class="fa fa-th fa-fw"></i>
                 <?= $this->url->link('Resumen', 'app', 'index', array(), false, '', t('Dashboard')) ?>
             </li>

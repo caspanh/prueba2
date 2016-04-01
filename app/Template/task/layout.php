@@ -14,6 +14,7 @@
                 <i class="fa fa-cog fa-fw"></i>
                 <?= $this->url->link(t('Project settings'), 'project', 'show', array('project_id' => $task['project_id'])) ?>
             </li>
+
                <li>
                 <i class="fa fa-folder fa-fw"></i>
                 <?= $this->url->link(t('Project management'), 'project', 'index') ?>
@@ -21,6 +22,7 @@
                 <li>
                 <i class="fa fa-life-ring fa-fw"></i>
                 <?= $this->url->link('Resumen', 'app', 'index', array(), false, '', t('Dashboard')) ?>
+
             </li>
             <?php endif ?>
         </ul>
