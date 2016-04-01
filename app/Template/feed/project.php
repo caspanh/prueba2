@@ -5,7 +5,7 @@
     <link rel="self" type="application/atom+xml" href="<?= $this->url->href('feed', 'project', array('token' => $project['token']), false, '', true) ?>"/>
     <updated><?= date(DATE_ATOM) ?></updated>
     <id><?= $this->url->href('feed', 'project', array('token' => $project['token']), false, '', true) ?></id>
-    <icon><?= $this->url->base() ?>assets/img/favicon.png</icon>
+    <icon><?= $this->url->base() ?>assets/img/fav.png</icon>
 
     <?php foreach ($events as $e): ?>
     <entry>
