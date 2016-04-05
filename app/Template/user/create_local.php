@@ -44,10 +44,9 @@
         </div>
 
         <div class="form-actions">
-            <input type="submit" value="<?= t('Save') ?>" class="btn btn-blue"/>
-        <div class="botoncancel">
+            <button type="submit" class="btn btn-blue"><?= t('Save') ?></button>
+            <?= t('or') ?>
             <?= $this->url->link(t('cancel'), 'user', 'index') ?>
-        </div>
         </div>
     </form>
     </section>

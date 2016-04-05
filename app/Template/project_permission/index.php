@@ -19,10 +19,8 @@
             </tr>
             <?php foreach ($users as $user): ?>
             <tr>
-
-                <td><div class="cambiocolor"><?= $this->e($user['name'] ?: $user['username']) ?></div></td>
+                <td><?= $this->text->e($user['name'] ?: $user['username']) ?></td>
                 <td>
-                <div class="cambiocolor">
                     <?= $this->form->select(
                         'role-'.$user['id'],
                         $roles,
@@ -31,11 +29,9 @@
                         array('data-url="'.$this->url->href('ProjectPermission', 'changeUserRole', array('project_id' => $project['id'])).'"', 'data-id="'.$user['id'].'"'),
                         'project-change-role'
                     ) ?>
-                </div>
                 </td>
                 <td>
-                <div class="cambiocolor">
-                    <?= $this->url->link(t('Remove'), 'ProjectPermission', 'removeUser', array('project_id' => $project['id'], 'user_id' => $user['id']), true) ?></div>
+                    <?= $this->url->link(t('Remove'), 'ProjectPermission', 'removeUser', array('project_id' => $project['id'], 'user_id' => $user['id']), true) ?>
                 </td>
             </tr>
             <?php endforeach ?>
@@ -61,7 +57,7 @@
 
             <?= $this->form->select('role', $roles, $values, $errors) ?>
 
-            <input type="submit" value="<?= t('Add') ?>" class="btn btn-blue"/>
+            <button type="submit" class="btn btn-blue"><?= t('Add') ?></button>
         </form>
     </div>
     <?php endif ?>
@@ -73,7 +69,6 @@
     <?php if (empty($groups)): ?>
         <div class="alert"><?= t('No group have been allowed specifically.') ?></div>
     <?php else: ?>
-
         <table>
             <tr>
                 <th class="column-50"><?= t('Group') ?></th>
@@ -84,9 +79,8 @@
             </tr>
             <?php foreach ($groups as $group): ?>
             <tr>
-                <td><div class="cambiocolor"><?= $this->e($group['name']) ?></div></td>
+                <td><?= $this->text->e($group['name']) ?></td>
                 <td>
-                <div class="cambiocolor">
                     <?= $this->form->select(
                         'role-'.$group['id'],
                         $roles,
@@ -95,12 +89,9 @@
                         array('data-url="'.$this->url->href('ProjectPermission', 'changeGroupRole', array('project_id' => $project['id'])).'"', 'data-id="'.$group['id'].'"'),
                         'project-change-role'
                     ) ?>
-                </div>
                 </td>
                 <td>
-                <div class="cambiocolor">
                     <?= $this->url->link(t('Remove'), 'ProjectPermission', 'removeGroup', array('project_id' => $project['id'], 'group_id' => $group['id']), true) ?>
-                </div>
                 </td>
             </tr>
             <?php endforeach ?>
@@ -128,7 +119,7 @@
 
             <?= $this->form->select('role', $roles, $values, $errors) ?>
 
-            <input type="submit" value="<?= t('Add') ?>" class="btn btn-blue"/>
+            <button type="submit" class="btn btn-blue"><?= t('Add') ?></button>
         </form>
     </div>
     <?php endif ?>
@@ -144,7 +135,7 @@
     <?= $this->form->checkbox('is_everybody_allowed', t('Allow everybody to access to this project'), 1, $project['is_everybody_allowed']) ?>
 
     <div class="form-actions">
-        <input type="submit" value="<?= t('Save') ?>" class="btn btn-blue"/>
+        <button type="submit" class="btn btn-blue"><?= t('Save') ?></button>
     </div>
 </form>
 <?php endif ?>

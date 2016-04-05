@@ -4,8 +4,12 @@
 <ul class="listing">
     <li><strong><?= $project['is_active'] ? t('Active') : t('Inactive') ?></strong></li>
 
-<div class="cambiocolor"> <?php if ($project['is_private']): ?>
-        <li><i class="fa fa-lock"></i> <?= t('This project is private') ?></li></div>
+    <?php if ($project['owner_id'] > 0): ?>
+        <li><?= t('Project owner: ') ?><strong><?= $this->text->e($project['owner_name'] ?: $project['owner_username']) ?></strong></li>
+    <?php endif ?>
+
+    <?php if ($project['is_private']): ?>
+        <li><i class="fa fa-lock"></i> <?= t('This project is private') ?></li>
     <?php endif ?>
 
     <?php if ($project['is_public']): ?>
@@ -17,15 +21,15 @@
     <?php endif ?>
 
     <?php if ($project['last_modified']): ?>
-        <li><?= dt('Last modified on %B %e, %Y at %k:%M %p', $project['last_modified']) ?></li>
+        <li><?= t('Modified:').' '.$this->dt->datetime($project['last_modified']) ?></li>
     <?php endif ?>
 
     <?php if ($project['start_date']): ?>
-        <li><?= t('Start date: %s', $project['start_date']) ?></li>
+        <li><?= t('Start date: ').$this->dt->date($project['start_date']) ?></li>
     <?php endif ?>
 
     <?php if ($project['end_date']): ?>
-        <li><?= t('End date: %s', $project['end_date']) ?></li>
+        <li><?= t('End date: ').$this->dt->date($project['end_date']) ?></li>
     <?php endif ?>
 
     <?php if ($stats['nb_tasks'] > 0): ?>
@@ -48,7 +52,6 @@
 <div class="page-header">
     <h2><?= t('Board') ?></h2>
 </div>
-
 <table class="table-stripped">
     <tr>
         <th class="column-60"><?= t('Column') ?></th>
@@ -58,9 +61,9 @@
     <?php foreach ($stats['columns'] as $column): ?>
     <tr>
         <td>
-            <?= $this->e($column['title']) ?>
+            <?= $this->text->e($column['title']) ?>
             <?php if (! empty($column['description'])): ?>
-                <span class="tooltip" title='<?= $this->e($this->text->markdown($column['description'])) ?>'>
+                <span class="tooltip" title='<?= $this->text->e($this->text->markdown($column['description'])) ?>'>
                     <i class="fa fa-info-circle"></i>
                 </span>
             <?php endif ?>

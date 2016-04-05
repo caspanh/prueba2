@@ -14,16 +14,14 @@
         </tr>
     <?php foreach ($custom_filters as $filter): ?>
          <tr>
-            <td><div class="cambiocolor"><?= $this->e($filter['name']) ?></div></td>
-            <td><div class="cambiocolor"><?= $this->e($filter['filter']) ?></div></td>
+            <td><?= $this->text->e($filter['name']) ?></td>
+            <td><?= $this->text->e($filter['filter']) ?></td>
             <td>
-            <div class="cambiocolor">
             <?php if ($filter['is_shared'] == 1): ?>
                 <?= t('Yes') ?>
             <?php else: ?>
                 <?= t('No') ?>
             <?php endif ?>
-            </div>
             </td>
             <td>
             <?php if ($filter['append'] == 1): ?>
@@ -32,14 +30,14 @@
                 <?= t('Replace') ?>
             <?php endif ?>
             </td>
-            <td><?= $this->e($filter['owner_name'] ?: $filter['owner_username']) ?></td>
+            <td><?= $this->text->e($filter['owner_name'] ?: $filter['owner_username']) ?></td>
             <td>
                 <?php if ($filter['user_id'] == $this->user->getId() || $this->user->hasProjectAccess('customfilter', 'edit', $project['id'])): ?>
                     <div class="dropdown">
-                    <a href="#" class="dropdown-menu dropdown-menu-link-icon"><i class="fa fa-cog fa-fw"></i><i class="fa facaret-down"></i></a>
+                    <a href="#" class="dropdown-menu dropdown-menu-link-icon"><i class="fa fa-cog fa-fw"></i><i class="fa fa-caret-down"></i></a>
                     <ul>
-                        <li><?= $this->url->link(t('Remove'), 'customfilter', 'remove', array('project_id' => $filter['project_id'], 'filter_id' => $filter['id']), true) ?></li>
-                        <li><?= $this->url->link(t('Edit'), 'customfilter', 'edit', array('project_id' => $filter['project_id'], 'filter_id' => $filter['id'])) ?></li>
+                        <li><?= $this->url->link(t('Remove'), 'customfilter', 'confirm', array('project_id' => $filter['project_id'], 'filter_id' => $filter['id']), false, 'popover') ?></li>
+                        <li><?= $this->url->link(t('Edit'), 'customfilter', 'edit', array('project_id' => $filter['project_id'], 'filter_id' => $filter['id']), false, 'popover') ?></li>
                     </ul>
                     </div>
                 <?php endif ?>

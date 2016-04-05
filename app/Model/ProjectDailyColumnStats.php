@@ -84,7 +84,7 @@ class ProjectDailyColumnStats extends Base
      */
     public function getAggregatedMetrics($project_id, $from, $to, $field = 'total')
     {
-        $columns = $this->board->getColumnsList($project_id);
+        $columns = $this->column->getList($project_id);
         $metrics = $this->getMetrics($project_id, $from, $to);
         return $this->buildAggregate($metrics, $columns, $field);
     }
@@ -165,7 +165,7 @@ class ProjectDailyColumnStats extends Base
     {
         foreach ($metrics as $metric) {
             if ($metric['day'] === $day && $metric['column_id'] == $column_id) {
-                return $metric[$field];
+                return (int) $metric[$field];
             }
         }
 

@@ -10,10 +10,9 @@
         <p class="alert"><?= t('%d task(s) in the column "%s" and the swimlane "%s" will be closed.', $nb_tasks, $column, $swimlane) ?></p>
 
         <div class="form-actions">
-            <input type="submit" value="<?= t('Save') ?>" class="btn btn-red">
-        <div class="botoncancel">
+            <button type="submit" class="btn btn-red"><?= t('Save') ?></button>
+            <?= t('or') ?>
             <?= $this->url->link(t('cancel'), 'board', 'show', array('project_id' => $project['id']), false, 'close-popover') ?>
-        </div>
         </div>
     </form>
 </section>

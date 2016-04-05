@@ -68,8 +68,32 @@ class Config extends Setting
     {
         // Sorted by value
         $languages = array(
+            'id_ID' => 'Bahasa Indonesia',
+            'bs_BA' => 'Bosanski',
+            'cs_CZ' => 'Čeština',
+            'da_DK' => 'Dansk',
+            'de_DE' => 'Deutsch',
+            'en_US' => 'English',
             'es_ES' => 'Español',
-            
+            'fr_FR' => 'Français',
+            'el_GR' => 'Grec',
+            'it_IT' => 'Italiano',
+            'hu_HU' => 'Magyar',
+            'my_MY' => 'Melayu',
+            'nl_NL' => 'Nederlands',
+            'nb_NO' => 'Norsk',
+            'pl_PL' => 'Polski',
+            'pt_PT' => 'Português',
+            'pt_BR' => 'Português (Brasil)',
+            'ru_RU' => 'Русский',
+            'sr_Latn_RS' => 'Srpski',
+            'fi_FI' => 'Suomi',
+            'sv_SE' => 'Svenska',
+            'tr_TR' => 'Türkçe',
+            'ko_KR' => '한국어',
+            'zh_CN' => '中文(简体)',
+            'ja_JP' => '日本語',
+            'th_TH' => 'ไทย',
         );
 
         if ($prepend) {
@@ -88,8 +112,30 @@ class Config extends Setting
     public function getJsLanguageCode()
     {
         $languages = array(
+            'cs_CZ' => 'cs',
+            'da_DK' => 'da',
+            'de_DE' => 'de',
+            'en_US' => 'en',
             'es_ES' => 'es',
-            
+            'fr_FR' => 'fr',
+            'it_IT' => 'it',
+            'hu_HU' => 'hu',
+            'nl_NL' => 'nl',
+            'nb_NO' => 'nb',
+            'pl_PL' => 'pl',
+            'pt_PT' => 'pt',
+            'pt_BR' => 'pt-br',
+            'ru_RU' => 'ru',
+            'sr_Latn_RS' => 'sr',
+            'fi_FI' => 'fi',
+            'sv_SE' => 'sv',
+            'tr_TR' => 'tr',
+            'ko_KR' => 'ko',
+            'zh_CN' => 'zh-cn',
+            'ja_JP' => 'ja',
+            'th_TH' => 'th',
+            'id_ID' => 'id',
+            'el_GR' => 'el',
         );
 
         $lang = $this->getCurrentLanguage();
@@ -109,7 +155,7 @@ class Config extends Setting
             return $this->sessionStorage->user['language'];
         }
 
-        return $this->get('application_language', 'es_ES');
+        return $this->get('application_language', 'en_US');
     }
 
     /**
@@ -195,6 +241,7 @@ class Config extends Setting
      * Prepare data before save
      *
      * @access public
+     * @param  array $values
      * @return array
      */
     public function prepare(array $values)
